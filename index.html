@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+    <html>
+        <head>
+            
+            <title> Rock Paper Scissors!!!</title>
+            <script>
+            function rps(player) {
+                computer=Math.round((Math.random()*2) + 1);
+            var choices = ["Rock", "Paper", "Scissors"];
+            //Randomly assigns a number to the computer and the player, variables of choices 
+            
+            if(player == computer){
+                alert("You and the computer tied with "+choices[player-1]+".");
+    }       //Case for tying the computer with the player
+    
+             else if((computer == 1 && player == 3) || (computer == 2 && player == 1) || (computer == 3 && player == 2)) {
+                 alert("The computer beat you! The computer's "+choices[computer-1]+" beats your "+choices[player-1]+".");
+    }       //A loss is given based on the math in line 6, assigns an alert with whatever choice the player was and the computer's choice
+    
+            else{
+                alert("You WIN! Your "+choices[player-1]+" beats the computer's "+choices[computer-1]+".");
+    }       //Alert for if the player wins, displays winning choice and computers
+    //HUGE Thanks to http://www.dreamincode.net/forums/topic/75459-rock-paper-scissors-help/ and username: "BetaWar" for writing this Javascript!!!
+}
+            </script>
+        </head>
+        
+        <body background= "./images/fire.gif">
+        <!--Sets background image as flames!-->    
+
+            <font color= "white" size= "24" face= "Impact"><marquee behavior="scroll" direction="right" scrollamount="10" bgcolor= "brown" >Rock</marquee></font>
+            <font color= "black" size= "24" face= "Impact"><marquee behavior="scroll" direction="right" scrollamount="12.5" bgcolor= "white">Paper</marquee></font>
+            <font color= "white" size= "24" face= "Impact"><marquee behavior="scroll" direction="right" scrollamount="15" bgcolor= "black">Scissors</marquee></font>
+            <!--makes scrolling Rock Paper Scissors Title-->
+            
+                <h1 style="color: blue" style=" background-color:white">Your move?</h1>
+                    <img src= "http://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/GabbroRockCreek1.jpg/220px-GabbroRockCreek1.jpg" value= "Rock" onclick="rps(1)" width="200" height="200">
+                    <img src= "http://shop.aph.org/wcsstore/APHConsumerDirect/images/catalog/products_large/1-04851-00_BL_Notebook_Paper_Punch_G.jpg" value "Paper" onclick="rps(2)" width="200" height="200">
+                    <img src="http://1.bp.blogspot.com/-v7rvfP2hsGc/UGHNBGNR5yI/AAAAAAAAADw/vTI7jfZK1GY/s1600/scissors-clip-art-5.jpg" value= "Scissors" onclick="rps(3)" width="200" height="200">
+            <p> <a href="http://en.wikipedia.org/wiki/Rock-paper-scissors" style="color: white; text-decoration: none; font-family: fantasy; font-size: larger" target="_blank">Here is the history of Rock Paper Scissors</a></p>
+            <br>
+            <p> <iframe width="560" height="315" src="http://www.youtube.com/embed/nKm8LXwKnbs" frameborder="0" allowfullscreen></iframe></p>
+            <p style="color: white"> Here's the <a href="http://www.dreamincode.net/forums/topic/75459-rock-paper-scissors-help/" target="_blank">link </a>to the forum where I got the Javascript soul of this project! Look at username "BetaWar"</p>
+
+        </body>
+    </html>
